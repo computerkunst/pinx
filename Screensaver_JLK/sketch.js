@@ -15,6 +15,7 @@ function setup() {
   createCanvas(800, 600);
   background(230);
   ellipseMode(RADIUS);
+  noCursor();
 }
 
 function draw() {
