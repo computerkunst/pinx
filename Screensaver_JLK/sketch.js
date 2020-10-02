@@ -42,6 +42,7 @@ if((x > width-radius) || (x < radius)){ // jetzt wird es kompliziert.
 	xdirection = -xdirection;	// invertiert die Richtung
 	speedx = random(4);		// verändert die Geschwindigkeit zufällig. Entweder 1,2,3,4 oder 0
 	farbe = random(255);		// verändert zufällig die Farbe wenn es den Rand berührt
+	fill(farbe, farbe1, farbe1*ydirection);
 	if(speedx < 1) {		// sollte die Geschwindigkeit zufällig unter 1 sein (also 0) dann doch bitte mit 2 zweiter machen
 		speed = 2; speedx = 2;
 	}
@@ -50,6 +51,7 @@ if((y > height-radius) || (y < radius)){ // Hier geht es darum, dass die Ellipse
 	ydirection = -ydirection;
 	farbe1 = random(255);
 	speed = random(4);
+	fill(farbe, farbe1, farbe1*ydirection);
 	if(speed < 1){
 		speed = 2; speedx = 2;
 	}	
@@ -58,7 +60,7 @@ if((y > height-radius) || (y < radius)){ // Hier geht es darum, dass die Ellipse
 }
 
 
-/*
+/*////////////////////////////////////// Codeschnipsel die vielleicht irgendwann irgendwo eingebaut werden können oder weggelassen wurden ///////////////////
 
 else{
 	fill(farbe, farbe1, farbe1*ydirection);
