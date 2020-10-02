@@ -60,7 +60,7 @@ if(mouseIsPressed && val == 1)		//// Programm 1
 
 if(mouseIsPressed && val == 2)		//// Programm 2
 {
- let laenge = map(val1, -100,400, 0,Heigth)
+ let laenge = map(val1, -100,400, 0,600)
    line(mouseX,mouseY,mouseX-laenge,mouseY-laenge);	// am simpelsten einfach nur eine Schräge Linie im Raum mit vordefinierter Länge
    stroke(colorPicker.color());
 	
