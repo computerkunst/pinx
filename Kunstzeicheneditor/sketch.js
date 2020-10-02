@@ -18,15 +18,15 @@ function setup() {
   button.mousePressed(HintergrundRandom);	// hinterlegt den Funktionsaufrug wenn der Button geklickt wird
 
   slider = createSlider(0, 3, 2);		// erstellt den Slider von min 0 bis max 3 und voreingestellt auf 2
-  slider.position(20, 110);
+  slider.position(20, 50);
   slider.style('width', '80px');		// definiert die Breite des Sliders
 
   slider1 = createSlider(-100, 400, 20);	// erstellt den zweiten Slider von min -100 bis max 400 und voreingestellt auf Wert 20
-  slider1.position(20, 50);
+  slider1.position(20, 80);
   slider1.style('width', '80px');
 
   colorPicker = createColorPicker('#000000');	// erstellt den ColorPicker mit Schwarz als voreingestellte Farbe
-  colorPicker.position(35,80);			// an dieser Position
+  colorPicker.position(25,110);			// an dieser Position
 
   button1 = createButton('speichern');		// noch ein Tastfeld
   button1.position(15, 140);
@@ -34,7 +34,7 @@ function setup() {
 
 
   textSize(20);
-  text('das Menü links ermöglicht dir verschiedene Farben auszuwählen // dein Werk zu speichern und verschiedene Linien Varianten zu verwenden!', 100, 100, width-100, height-100);
+  text('das Menü links ermöglicht dir verschiedene Farben auszuwählen, \ndein Werk zu speichern und verschiedene Linien Varianten zu verwenden!', 100, 100, width-100, height-100);
 }
   
   
