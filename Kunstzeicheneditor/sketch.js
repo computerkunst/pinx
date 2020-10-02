@@ -91,8 +91,9 @@ function HintergrundRandom() {
   let g = random(255);
   let b = random(255);
   background(r,g,b);
+	}
+  else  background(0);
 }
-else  background(0);
 
 function Aufruf(){
 	
