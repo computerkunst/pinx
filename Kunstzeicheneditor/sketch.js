@@ -1,6 +1,11 @@
+// Was geht hier vor: Wie ist der Code des Kunstzeicheneditors aufgebaut?
+// CC JLK 2020
 
-let colorPicker;
-let slider;
+// Was wird alles benötigt
+let colorPicker;	// greift auf das Farbpaletten Fenster von javascript zu
+let slider;		// greift auf das slidertool von javascript zu
+var Klicks = 0;
+
 function setup() {
   // put setup code here
   
@@ -8,32 +13,28 @@ function setup() {
  // createCanvas(windowWidth-10, windowHeight-10);
   createCanvas(874, 620);// oder Postkartengröße
 
-  button = createButton('drück mich');
-  button.position(10, 20);
-  button.mousePressed(HintergrundRandom);
+  button = createButton('drück mich');		// erstellt einen drückbaren Knopf mit der Beschriftung "drück mich"
+  button.position(10, 20);			// an dieser Position
+  button.mousePressed(HintergrundRandom);	// hinterlegt den Funktionsaufrug wenn der Button geklickt wird
 
-
- 
-
-  colorPicker = createColorPicker('#000000');
-  colorPicker.position(35,80);
-
-  slider = createSlider(0, 3, 2);
+  slider = createSlider(0, 3, 2);		// erstellt den Slider von min 0 bis max 3 und voreingestellt auf 2
   slider.position(20, 110);
-  slider.style('width', '80px');
+  slider.style('width', '80px');		// definiert die Breite des Sliders
 
-
-  slider1 = createSlider(-100, 400, 20);
+  slider1 = createSlider(-100, 400, 20);	// erstellt den zweiten Slider von min -100 bis max 400 und voreingestellt auf Wert 20
   slider1.position(20, 50);
   slider1.style('width', '80px');
 
-  button1 = createButton('speichern');
+  colorPicker = createColorPicker('#000000');	// erstellt den ColorPicker mit Schwarz als voreingestellte Farbe
+  colorPicker.position(35,80);			// an dieser Position
+
+  button1 = createButton('speichern');		// noch ein Tastfeld
   button1.position(15, 140);
-  button1.mousePressed(Aufruf);
+  button1.mousePressed(Aufruf);			// wenn geklickt folgt es dem Aufruf siehe unten
 
 
   textSize(20);
-  text('das Menü links ermöglicht dir verschieden Farben auszuwählen, dein Werk zu speichern und verschiedene Linien Varianten zu verwenden!', 100, 100, width-100, height-100);
+  text('das Menü links ermöglicht dir verschiedene Farben auszuwählen // dein Werk zu speichern und verschiedene Linien Varianten zu verwenden!', 100, 100, width-100, height-100);
 }
   
   
@@ -83,11 +84,15 @@ else{
 //////////////////////////////77
 
 function HintergrundRandom() {
+	
+  Klicks = Klicks + 1;
+  if(Klicks > 1){
   let r = random(255);
   let g = random(255);
   let b = random(255);
   background(r,g,b);
 }
+else  background(0);
 
 function Aufruf(){
 	
