@@ -24,7 +24,7 @@ function setup() {
   slider1.position(20, 80);
   slider1.style('width', '80px');
 
-  colorPicker = createColorPicker('#000000'); // erstellt den ColorPicker mit Schwarz als voreingestellte Farbe
+  colorPicker = createColorPicker('#848484'); // erstellt den ColorPicker mit Schwarz als voreingestellte Farbe
   colorPicker.position(25,110);     		// an dieser Position
 
   button1 = createButton('speichern');    // noch ein Tastfeld
@@ -88,9 +88,9 @@ function HintergrundRandom() {		// hier wird durch den Button "drück mich" die 
   background(r,g,b);
   }
   
-  else  {
+  else  {				// beim ersten Klicken soll erstmal nur der Text verschwinden deshalb nochmal createCanvas 
 	  createCanvas(874,620);
-	  background(255,255,255,0);
+	  background(255,255,255,0);	// ein Transparenter Hintergrund entstehen!
 	}
 }
 function Aufruf(){
