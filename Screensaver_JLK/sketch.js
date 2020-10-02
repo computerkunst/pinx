@@ -24,9 +24,15 @@ function draw() {
 
 ellipse(x,y, radius, radius);		// zeichnet eine Ellipse mit folgenden Werten 
 	
-	if(mouseIsPressed) 		// Anweisung was getan werden soll WENN: der Maustaster gedrückt wird
+x += speedx * xdirection;		// X Achse: wo soll sich die Ellipse hinbewegen und wie schnell? += der Wert verändert sich immer weiter dadurch kommt die Bewegung
+y += speed * ydirection;		// Y Achse
+print(xdirection);			// hier wird der Wert xdirection also die Richtung ausgegeben du findest ihn in der Webkonsole deines Browsers bei Firefox STRG + Umschalt + K
+print(ydirection);			// oder unter Extras / Web-Entwickler / Web-Konsole
+
+	
+ if(mouseIsPressed) 		// Anweisung was getan werden soll WENN: der Maustaster gedrückt wird
 	{
-	fill(mouseX,mouseY,100);	// die Farbe verändert sich je nach Koordinaten des (unsichtbaren) Mauszeigers
+	fill(mouseX,mouseY,x);	// die Farbe verändert sich je nach Koordinaten des (unsichtbaren) Mauszeigers
 	//speed = 2;			// hier könnte noch die Geschwindigkeit verändert werden
 	}
 
@@ -48,11 +54,6 @@ if((y > height-radius) || (y < radius)){ // Hier geht es darum, dass die Ellipse
 		speed = 2; speedx = 2;
 	}	
 	} 
-
-x += speedx * xdirection;
-y += speed * ydirection;
-print(xdirection);
-print(ydirection);
 
 }
 
