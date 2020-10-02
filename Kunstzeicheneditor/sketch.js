@@ -61,7 +61,7 @@ if(mouseIsPressed && val == 1)		//// Programm 1
 if(mouseIsPressed && val == 2)		//// Programm 2
 {
  let laenge = map(val1, -100,400, 0,600)
-//   line(mouseX,mouseY,mouseX-laenge,mouseY-laenge);	// am simpelsten einfach nur eine Schräge Linie im Raum mit vordefinierter Länge
+   line(mouseX,mouseY,mouseX-laenge,mouseY-laenge);	// am simpelsten einfach nur eine Schräge Linie im Raum mit vordefinierter Länge
    stroke(colorPicker.color());
 	
 
@@ -91,8 +91,8 @@ function HintergrundRandom() {		// hier wird durch den Button "drück mich" die 
   else  {
 	  createCanvas(874,620);
 	  background(255,255,255,0);
+	}
 }
-
 function Aufruf(){
   save('Komputerkunst.png');		// als .png Bild speichern
   //save('NeuesKunstwerk.jpg');		// als .jpg Bild ginge natürlich auch
