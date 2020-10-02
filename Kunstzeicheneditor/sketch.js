@@ -4,7 +4,7 @@
 // Was wird alles benötigt
 let colorPicker;	// greift auf das Farbpaletten Fenster von javascript zu
 let slider;		// greift auf das slidertool von javascript zu
-var Klicks = 0;
+var jepp = 0;
 
 function setup() {
   // put setup code here
@@ -85,8 +85,8 @@ else{
 
 function HintergrundRandom() {
 	
-  Klicks = Klicks + 1;
-  if(Klicks > 1){
+  jepp = jepp + 1;
+  if(jepp > 1){
   let r = random(255);
   let g = random(255);
   let b = random(255);
