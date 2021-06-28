@@ -13,7 +13,7 @@ Was heißt das genau?
    
    ## 2.2. [Zeicheneditor](https://computerkunst.github.io/pinx/Kunstzeicheneditor/)
    
-   ## 2.3. [Weitere Beispiele] (https://computerkunst.github.io/pinx/Beispiele/)
+   ## 2.3. [Weitere Beispiele](https://computerkunst.github.io/pinx/Beispiele/)
 
 
 
